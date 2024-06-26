@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "name": "sale-tax-calc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+     "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marth5464/SalesTax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marth5464/SalesTax/issues"
+  },
+  "homepage": "https://github.com/marth5464/SalesTax#readme",
+  "description": ""
 }
