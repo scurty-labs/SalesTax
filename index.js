@@ -5,7 +5,9 @@ app.use(express.static(__dirname));
 
 app.get('/', function (req, res) {
     const options = {root: __dirname};
-    res.sendFile('Index.Html', options);
+
+    // directory/files are case sensitive
+    res.sendFile('index.html', options);
 });
 
 app.listen(8080, () =>{
