@@ -14,6 +14,9 @@ app.use(express.static(__dirname));
 // Serve static folder "Resources"
 app.use(express.static(path.join(__dirname, 'Resources')))
 
+// Serve static folder "js"
+app.use(express.static(path.join(__dirname, 'js')))
+
 /* -- ROUTES -- */
 
 router.get('/', function (req, res) {
