@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const router = express.Router();
 
 // directory/files *should* be case sensitive to avoid fuckery
 const index_path = "index.html"
@@ -8,7 +9,9 @@ const index_path = "index.html"
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname));
 
-app.get('/', function (req, res) {
+/* -- ROUTES -- */
+
+router.get('/', function (req, res) {
     const options = {root: __dirname};
 
     res.sendFile(index_path, options);
