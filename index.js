@@ -4,7 +4,7 @@ const app = express();
 // directory/files *should* be case sensitive to avoid fuckery
 const index_path = "index.html"
 
-// basically json/post middleware I.E: express.json(); Nifty indeed...
+// basically json post middleware I.E: express.json(); Nifty indeed...
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname));
 
@@ -19,20 +19,3 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log("Server is running on http://localhost:8080");
 });
-
-/* -- diff
-const express = require('express');
-const app = express();
-const path = require(path); // Not sure if this was a typo
-
-app.use(express.static(__dirname));
-
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(Server listening on port ${PORT}...);
-});
-*/
