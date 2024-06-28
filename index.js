@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+// basically json/post middleware I.E: express.json(); Nifty indeed...
+app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname));
 
 app.get('/', function (req, res) {
@@ -10,6 +12,7 @@ app.get('/', function (req, res) {
     res.sendFile('index.html', options);
 });
 
+// As described in diff
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log("Server is running on http://localhost:8080");
